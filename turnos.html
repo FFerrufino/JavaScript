@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Barbería, Corte de pelo, Corte de barba, Pelo, Barba, Cortes, Barber, Peinados"
+    />
+    <meta
+      name="description"
+      content="Aquí podrás pedir un turno para reservar el horario que se acomode a tus necesidades."
+    />
+    <title>BarberíaSantini Turnos</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Estilos.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <!-- Comienzo del navbar -->
+    <header class="menu d-flex flex-wrap justify-content-center py-3 mb-4">
+      <a
+        href="index.html"
+        class="
+          d-flex
+          align-items-center
+          mb-3 mb-md-0
+          me-md-auto
+          text-dark text-decoration-none
+        "
+      >
+        <img class="logo_menu" src="./imgs/logoc3.png" alt="logo" />
+        <span class="fs-4 boton_logo">BARBERIA SANTINI</span>
+      </a>
+
+      <div class="btn-group">
+        <a href="index.html" class="nav-link"
+          ><button class="button">Inicio</button></a
+        >
+        <a href="turnos.html" class="nav-link"
+          ><button class="button">Turnos</button></a
+        >
+        <a href="cortes.html" class="nav-link"
+          ><button class="button">Cortes de pelo</button></a
+        >
+        <a href="cortesbarba.html" class="nav-link"
+          ><button class="button">Cortes de barba</button></a
+        >
+        <a href="redes.html" class="nav-link"
+          ><button class="button">Redes</button></a
+        >
+      </div>
+      <div class="loginav">
+        <!-- Register -------------------------------------------------------------->
+
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn-reg btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Registrese
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  Registrese llenando con sus datos
+                </h5>
+                <!-- <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button> -->
+              </div>
+              <div class="modal-body">
+                <fieldset class="formulario">
+                  <label for="Usuario">Usuario:</label>
+                  <input
+                    class="reg-usuario"
+                    type="text"
+                    name="Usuario"
+                    placeholder="Usuario"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Contraseña">Contraseña:</label>
+                  <input
+                    class="reg-contrasena"
+                    type="password"
+                    name="Contraseña"
+                    placeholder="Contraseña"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Nombre">Nombre:</label>
+                  <input
+                    class="reg-nombre"
+                    type="text"
+                    name="Nombre"
+                    placeholder="Nombre"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Apellido">Apellido:</label>
+                  <input
+                    class="reg-apellido"
+                    type="text"
+                    name="apellido"
+                    placeholder="Apellido"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Edad">Edad:</label>
+                  <input
+                    class="reg-edad"
+                    type="text"
+                    name="Edad"
+                    placeholder="Edad"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="NroTelefono">Nro de Telefono:</label>
+                  <input
+                    class="reg-telefono"
+                    type="text"
+                    name="NroTelefono"
+                    placeholder="NroTelefono"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Mail">Mail:</label>
+                  <input
+                    class="reg-mail"
+                    type="text"
+                    name="Mail"
+                    placeholder="Mail"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <!-- <button type="submit">Pedir Turno</button>
+                  <button type="reset">Limpiar formulario</button> -->
+                </fieldset>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button
+                  type="submit"
+                  class="reg-boton btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login ---------------------------------------------------------------------->
+
+        <button
+          type="button"
+          class="btn-log btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop2"
+        >
+          Iniciar sesión
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop2"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  Registrese llenando con sus datos
+                </h5>
+              </div>
+              <div class="modal-body">
+                <fieldset class="formulario">
+                  <label for="Usuario">Usuario:</label>
+                  <input
+                    class="log-usuario"
+                    type="text"
+                    name="Usuario"
+                    placeholder="Usuario"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                  <label for="Contraseña">Contraseña:</label>
+                  <input
+                    class="log-contrasena"
+                    type="password"
+                    name="Contraseña"
+                    placeholder="Contraseña"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                </fieldset>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button
+                  type="submit"
+                  class="log-boton btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Iniciar sesión
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          style="display: none"
+          type="button"
+          id="cerrarses"
+          class="botonsesion"
+        >
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+    <!-- Fin del navbar -->
+
+    <!-- Comienzo del formulario de turnos -->
+    <div class="cuerpo">
+      <div class="formulario-titulo">
+        <h1>Aquí podrás pedir tu turno</h1>
+        <h2>Por favor, llene los siguientes datos:</h2>
+      </div>
+      <div class="contenedor-formulario">
+        <div class="formulario-letras">
+          <form action="">
+            <fieldset class="formulario">
+              <label for="Nombre">Nombre:</label>
+              <input
+                class="form-nombre"
+                type="text"
+                name="Nombre"
+                placeholder="Nombre"
+                autocomplete="off"
+              />
+              <br /><br />
+              <label for="Apellido">Apellido:</label>
+              <input
+                class="form-apellido"
+                type="text"
+                name="apellido"
+                placeholder="Apellido"
+              />
+              <br /><br />
+              <label for="Edad">Edad:</label>
+              <input
+                class="form-edad"
+                type="text"
+                name="Edad"
+                placeholder="Edad"
+              />
+              <!-- <br /><br />
+              <label for="Sexo">Sexo:</label>
+              <select name="sexo" class="form-sexo">
+                <option selected value="0">Elige una opción</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Otro">Otro</option>
+              </select> -->
+              <br /><br />
+              <label for="NroTelefono">Nro de Telefono:</label>
+              <input
+                class="form-telefono"
+                type="text"
+                name="NroTelefono"
+                placeholder="NroTelefono"
+              />
+              <br /><br />
+              <label for="Mail">Mail:</label>
+              <input
+                class="form-mail"
+                type="text"
+                name="Mail"
+                placeholder="Mail"
+              />
+              <br /><br />
+              <label for="start">Elegir fecha:</label>
+
+              <input
+                type="date"
+                class="form-fecha"
+                name="Fecha:"
+                value="2021-08-06"
+                min="2021-07-01"
+                max="2021-12-31"
+              />
+              <br /><br />
+              <textarea
+                rows="10"
+                cols="30"
+                placeholder="Comentarios"
+              ></textarea>
+              <br /><br />
+              <button class="form-boton" type="button">Pedir Turno</button>
+              <button type="reset">Limpiar formulario</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Fin del formulario de turnos -->
+
+    <!-- Comienzo del footer -->
+    <footer class="footer-estilo page-footer font-small blue pt-4">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase">BarberíaSantini</h5>
+            <p>Frase de footer.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3" />
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        © 2021 Copyright:
+        <a href="index.html"> BarberíaSantini</a>
+      </div>
+    </footer>
+    <!-- Fin del footer -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

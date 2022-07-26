@@ -1,0 +1,400 @@
+@charset "UTF-8";
+html {
+  position: relative;
+}
+
+.footer-estilo {
+  background-color: #0d1222;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  width: 100%;
+  position: absolute;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background: url("./imgs/logo.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  z-index: -1;
+}
+
+.cuerpo {
+  padding: 20px;
+  margin: 0;
+  background-color: rgba(23, 33, 58, 0.9);
+  width: 1400px;
+  margin: auto;
+  min-height: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.menu {
+  background-color: #0d1222;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  margin: auto;
+  display: table;
+}
+
+.logo_menu {
+  height: 80px;
+  width: 80px;
+}
+
+.boton_logo {
+  font-size: 30px;
+  color: white;
+  padding-right: 100px;
+}
+
+.boton_menu {
+  color: white;
+}
+
+.button h2 {
+  font-size: 1.1rem;
+}
+
+.btn-group .button {
+  background-color: #27263a;
+  /* Green */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-group .button:not(:last-child) {
+  border-right: none;
+  /* Prevent double borders */
+}
+.btn-group .button:hover {
+  background-color: #37305e;
+}
+
+.size-carrusel {
+  width: auto;
+  height: auto;
+}
+
+.img-carrusel {
+  width: 80%;
+  height: 600px;
+}
+
+.boton-carrusel {
+  text-decoration: none;
+  font-style: inherit;
+  color: white;
+}
+
+.carrusel {
+  height: 600px;
+}
+
+.formulario-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.formulario-titulo h2 {
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.contenedor-formulario {
+  position: relative;
+  height: 700px;
+  display: flex;
+}
+
+.formulario-letras {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#grid {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "head head" "nav  main" "nav  foot";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+  padding: 50px;
+  min-height: calc(100vh - 10px);
+}
+#grid header {
+  grid-area: head;
+  background-color: #2a48da;
+}
+#grid nav {
+  grid-area: nav;
+  background-color: #dd4021;
+}
+#grid main {
+  grid-area: main;
+  background-color: #44ee10;
+}
+#grid footer {
+  grid-area: foot;
+  background-color: #15eaf1;
+}
+
+/* Contenedores de Cortes */
+.contenedor {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.cortes-1 {
+  width: 100%;
+}
+
+label {
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
+.corte {
+  background-color: #0d1222;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.corte__imagen {
+  width: 70%;
+  height: 90%;
+  margin-right: 30px;
+}
+
+.corte__titulo {
+  font-size: 30px;
+  color: white;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+/* Descripción Barbería */
+.contenedor-descripcion {
+  display: flex;
+  position: relative;
+}
+
+.img-descripcion {
+  width: 70%;
+}
+.img-descripcion img {
+  width: 100%;
+  right: 0px;
+}
+
+.descripcion {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+}
+
+.descripcion-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.contenedor-sucursal {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
+.img-sucursal {
+  width: 70%;
+}
+.img-sucursal img {
+  width: 100%;
+  right: 0px;
+}
+
+.sucursal {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+}
+
+.sucursal-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-box {
+  background-color: white;
+  background-size: 100%;
+  display: flex;
+  width: 100%;
+  height: 700px;
+}
+.overlay-box:hover .desc,
+.overlay-box:focus .desc {
+  opacity: 0.9;
+}
+.overlay-box .desc {
+  text-decoration: none;
+  opacity: 0.01;
+  min-height: 355px;
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  padding: 30px 25px 20px;
+  transition: all 0.3s ease;
+  background: rgba(201, 194, 194, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay1 {
+  background: url("./imgs/cortando-barba.jpg") no-repeat;
+  background-size: cover;
+}
+
+.overlay2 {
+  background: url("./imgs/cortando-pelo.jpg") no-repeat;
+  background-size: cover;
+}
+
+.opciones-caja {
+  display: flex;
+  border-bottom-left-radius: 20px;
+}
+
+.icono-opciones {
+  width: 150px;
+  height: 150px;
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: column;
+  margin: 70px;
+}
+
+.frase-redes {
+  display: flex;
+}
+.frase-redes h3 {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-redes {
+  display: flex;
+  padding-top: 10px;
+}
+.logo-redes img {
+  width: 170px;
+  height: 170px;
+}
+
+.footer-redes {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+} /*# sourceMappingURL=Estilos.css.map */
+
+.loginav {
+  display: flex;
+  flex-direction: row;
+  width: 250;
+  padding-left: 50px;
+}
+
+.login {
+  color: #15eaf1;
+  padding-left: 0px;
+  display: flex;
+  margin: auto;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.register {
+  color: #15eaf1;
+  display: flex;
+  margin: auto;
+  padding-left: 0px;
+}
+
+.nombreusuario {
+  padding-right: 50px;
+  margin: auto;
+}
+
+.btn-reg {
+  height: auto;
+  margin: auto;
+  margin-right: 20px;
+}
+
+.btn-log {
+  height: auto;
+  margin: auto;
+}
+
+.botonsesion {
+  height: auto;
+  margin: auto;
+}
